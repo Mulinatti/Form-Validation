@@ -1,0 +1,213 @@
+* {
+
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+}
+
+html {
+
+    height: 100vh;
+}
+
+body {
+
+    background-color: #111111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.formulario {
+
+    background-color: #fafafa;
+    max-width: 500px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, auto);
+    color: #3b2a63;
+    row-gap: 20px;
+    margin: 50px 0;
+}
+
+.titulo-principal {
+
+    text-align: center;
+    border-bottom: 1px solid #3b2a637c;
+}
+
+.campo {
+
+    position: relative;
+}
+
+.dados {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(4, auto);
+    row-gap: 15px;
+    column-gap: 10px;
+}
+
+.titulo {
+
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.campo-nome {
+
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+}
+
+.campo-sobrenome {
+
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+}
+
+.campo-email {
+
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.campo-senha {
+
+    grid-column: 1 / 3;
+    grid-row: 4 / 5;
+}
+
+.campo-cpf {
+
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.campo-data {
+
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.campo-cep {
+
+    grid-column: 1 / 3;
+    grid-row: 2 / 3;
+}
+
+.campo-logradouro {
+
+    grid-column: 1 / 3;
+    grid-row: 3 / 4;
+}
+
+.campo-cidade {
+
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+}
+
+.campo-estado {
+
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+}
+
+input {
+
+    outline: none;
+    font-size: 1.2rem;
+    padding: 10px;
+    width: 100%;
+    background: transparent;
+    border: 1px solid #3b2a63;
+}
+
+label {
+    
+    position: absolute;
+    left: 15px;
+    top: 13px;
+    transition: top .3s;
+    background-color: #fafafa;
+    padding: 0 5px;
+    pointer-events: none;
+}
+
+.campo input:valid ~ label, .campo input:focus ~ label {
+
+   top: -11px;
+}
+
+button {
+
+    padding: 15px;
+    background-color: #3b2a63;
+    border: none;
+    color: #fff;
+    font-size: 1.2rem;
+    width: 50%;
+    justify-self: center;
+}
+
+@media only screen and (max-width: 400px) {
+
+    
+    .dados {
+        
+        grid-template-rows: repeat(5, auto);
+    }
+
+    .campo-nome {
+
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    .campo-sobrenome {
+    
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+    
+    .campo-email {
+    
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+    
+    .campo-senha {
+    
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+    }
+    
+    .campo-cep {
+    
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;
+    }
+    
+    .campo-logradouro {
+    
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+    
+    .campo-cidade {
+    
+        grid-column: 1 / 3;
+        grid-row: 4 / 5;
+    }
+    
+    .campo-estado {
+    
+        grid-column: 1 / 3;
+        grid-row: 5 / 6;
+    }
+}
