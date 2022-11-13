@@ -3,7 +3,7 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Inter", sans-serif;
+    font-family: "Fira Code", "Inter", sans-serif;
 }
 
 html {
@@ -13,7 +13,7 @@ html {
 
 body {
 
-    background-color: #111111;
+    background-color: #141414;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -21,13 +21,13 @@ body {
 
 .formulario {
 
-    background-color: #fafafa;
+    background-color: #313131;
     max-width: 500px;
     padding: 20px;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: repeat(4, auto);
-    color: #3b2a63;
+    color: #5cff8d;
     row-gap: 20px;
     margin: 50px 0;
 }
@@ -35,7 +35,8 @@ body {
 .titulo-principal {
 
     text-align: center;
-    border-bottom: 1px solid #3b2a637c;
+    border-bottom: 1px solid #5dff9e56;
+    padding-bottom: 15px;
 }
 
 .campo {
@@ -48,12 +49,11 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, auto);
-    row-gap: 15px;
-    column-gap: 10px;
+    gap: 15px;
 }
 
 .titulo {
-
+    
     grid-column: 1 / 3;
     grid-row: 1 / 2;
 }
@@ -121,43 +121,72 @@ body {
 input {
 
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     padding: 10px;
     width: 100%;
     background: transparent;
-    border: 1px solid #3b2a63;
+    border: 1px solid #5dff9e3a;
+    color: #fff;
+    transition: all .5s;
+    color-scheme: dark;
 }
 
 label {
     
     position: absolute;
     left: 15px;
-    top: 13px;
-    transition: top .3s;
-    background-color: #fafafa;
+    top: 14px;
+    transition: all .3s;
+    background-color: #313131;
     padding: 0 5px;
     pointer-events: none;
 }
 
-.campo input:valid ~ label, .campo input:focus ~ label {
+input::placeholder {
 
-   top: -11px;
+    visibility: hidden;
 }
+
+input:focus {
+
+    border: 1px solid #5dff9e;
+}
+
+input:focus + label,
+input:not(:placeholder-shown) + label {
+
+    top: -11px;
+}
+
 
 button {
 
     padding: 15px;
-    background-color: #3b2a63;
+    background-color: #47c96e;
     border: none;
     color: #fff;
     font-size: 1.2rem;
     width: 50%;
     justify-self: center;
+    font-weight: 700;
+    transition: ease-in-out .3s;
+}
+
+button:hover {
+
+    background-color: #57e080;
+    color: #ffffff;
+    cursor: pointer;
 }
 
 @media only screen and (max-width: 400px) {
 
-    
+    .formulario {
+
+        margin: 0;
+        width: 100vw;
+    }
+
     .dados {
         
         grid-template-rows: repeat(5, auto);

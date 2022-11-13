@@ -12,57 +12,59 @@
     </head>
     <body>
         <form class="formulario" action="">
-            <h1 class="formulario-titulo titulo-principal">Cadastro</h1>
+            <h1 class="formulario-titulo titulo-principal">Cadastro&lt;&sol;&gt;</h1>
             <div class="dados login">
                 <h2 class="login-titulo titulo">Informações básicas</h2>
                 <section class="campo campo-nome">
-                    <input type="text" required>
+                    <input type="text" required  placeholder="nome">
                     <label for="nome">Nome</label>
                 </section>
                 <section class="campo campo-sobrenome">
-                    <input type="text" required>
+                    <input type="text" required  placeholder="Sobrenome">
                     <label for="sobrenome">Sobrenome</label>
                 </section>
                 <section class="campo campo-email">
-                    <input type="email" required>
+                    <input type="email" required  placeholder="E-Mail">
                     <label for="email">E-Mail</label>
                 </section>
                 <section class="campo campo-senha">
-                    <input type="password" required>
+                    <input type="password" required maxlength="16" placeholder="Senha" pattern="^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,16}$"
+                    title="A senha deve conter um número, um caractere especial, uma letra maiúscula, entre 8 e 16 letras">
                     <label for="senha">Senha</label>
                 </section>
             </div>
             <div class="dados pessoal">
                 <h2 class="pessoal-titulo titulo">Informações Pessoais</h2>
                 <section class="campo campo-cpf">
-                    <input type="text" required>
+                    <input type="text" required  placeholder="CPF">
                     <label for="cpf">CPF</label>
                 </section>
                 <section class="campo campo-data">
-                    <input type="text" required>
+                    <input id="nascimento" type="date" required  placeholder="Data de Nascimento">
                     <label for="birthDate">Data de Nascimento</label>
                 </section>
             </div>
             <div class="dados endereco">
                 <h2 class="endereco-titulo titulo">Endereço</h2>
                 <section class="campo campo-cep">
-                    <input type="text" required>
+                    <input type="text" required  placeholder="CEP">
                     <label for="cep">CEP</label>
                 </section>
                 <section class="campo campo-logradouro">
-                    <input type="text" required>
+                    <input type="text" required  placeholder="Logradouro">
                     <label for="logradouro">Logradouro</label>
                 </section>
                 <section class="campo campo-cidade">
-                    <input type="text" required>
+                    <input type="text" required  placeholder="Cidade">
                     <label for="cidade">Cidade</label>
                 </section>
                 <section class="campo campo-estado">
-                    <input type="text" required>
+                    <input type="text" required  placeholder="Estado">
                     <label for="estado">Estado</label>
                 </section>
             </div>
             <button>Cadastrar</button>
         </form>
     </body>
+    <script src="assets/js/validacao.js"></script>
 </html>
